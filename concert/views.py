@@ -42,7 +42,7 @@ def songs(request):
 
 def photos(request):
     photos = [{
-          "id": 1,
+        "id": 1,
         "pic_url": "http://dummyimage.com/136x100.png/5fa2dd/ffffff",
         "event_country": "United States",
         "event_state": "District of Columbia",
@@ -81,7 +81,7 @@ def concerts(request):
                     user=request.user).first().attending
             except:
                 status = "-"
-            lst_of_concert({
+            lst_of_concert.append({
                 "concert": item,
                 "status": status
             })
